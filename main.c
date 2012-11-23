@@ -7,7 +7,7 @@
 
 int main(int argc, char **argv)
 {
-	printf("%s ", *argv);
-	parseROM(argv[0]); 
+  printf("%s ", *argv);
+  parseROM(argv[0]); 
   //test_opcodes();
-}	
+}
