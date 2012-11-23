@@ -19,10 +19,10 @@ typedef struct {
   unsigned char f;
 
   // Program counter - stores address of next instruction
-  unsigned char pc;
+  unsigned int pc;
   
   // Stack pointer
-  unsigned char sp;
+  unsigned int sp;
 
   // Used for time-keeping
   unsigned char m;
