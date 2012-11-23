@@ -1,6 +1,6 @@
 #ifndef PARSE_H
 #define PARSE_H
 
-void testparse();
+int parseROM(int x);
 
 #endif
