@@ -1,5 +1,7 @@
 #include <stdio.h>
-int main(){
-	printf("dad is a fattapus");
+#include "parse.h"
 
+int main(){
+	printf("dad is a fattapus\n");
+  testparse();
 }
