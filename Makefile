@@ -1,2 +1,2 @@
 all:
-	gcc -g -Wall -std=C99 main.c -o gameboy
+	gcc -g -Wall -std=c99 main.c -o gameboy
