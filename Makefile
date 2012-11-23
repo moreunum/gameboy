@@ -1,7 +1,7 @@
 flags=-g -Wall -std=c99
 
-all: main.o parse.o cpu.o cpu_test.o
-	gcc $(flags) main.o parse.o cpu.o cpu_test.o -o gameboy
+all: main.o parse.o cpu.o cpu_test.o mmu.o
+	gcc $(flags) main.o parse.o cpu.o cpu_test.o mmu.o -o gameboy
 
 main.o: main.c
 	gcc $(flags) -c main.c
@@ -14,3 +14,6 @@ cpu.o: cpu.c
 
 cpu_test.o: cpu_test.c
 	gcc $(flags) -c cpu_test.c
+
+mmu.o: mmu.c
+	gcc $(flags) -c mmu.c
