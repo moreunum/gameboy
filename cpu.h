@@ -1,6 +1,8 @@
 #ifndef CPU_H
 #define CPU_H
 
+enum {STACK_MAX = 65530};
+
 typedef struct {
   // CPU 8-bit General Purpose Registers
   int a;
@@ -29,7 +31,7 @@ typedef struct {
   unsigned char t;
 } Z80_t;
 
-void ADDa_b(Z80_t* Z80);
+int ADDa_b(Z80_t* Z80);
+int PUSHb_c(Z80_t* Z80);
 
 #endif
-

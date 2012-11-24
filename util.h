@@ -14,12 +14,18 @@
 	
 #define check_debug(A, M, ...) if(!(A)) { debug(M, ##__VA_ARGS__); goto error; }
 
-#define error(M, ...) fprintf(stderr, "[ERROR] %s:%d: " M "\n", __FILE__, \
-	__LINE__, ##__VA_ARGS__)
+#ifdef NDEBUG
+  #define error(M, ...)
+#else
+  #define error(M, ...) fprintf(stderr, "[ERROR] %s:%d: " M "\n", __FILE__, \
+    __LINE__, ##__VA_ARGS__)
+#endif
 
 #define check_error(A, M, ...) if(!(A)) { error(M, ##__VA_ARGS__); goto error; }
 
 #define check_error_silent(A) if(!(A)) { goto error; }
+
+enum {ERROR = -1};
 
 #define test_failure(M, ...) fprintf(stderr, "== TEST FAILED == %s:%d: " M "\n", __FILE__, \
 	__LINE__, ##__VA_ARGS__)
